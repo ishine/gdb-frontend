@@ -77,6 +77,10 @@
                     }
 
                     var refresh_parameters = parameters;
+
+                    if (parameters.onFileSelected) {
+                        data.onFileSelected = parameters.onFileSelected;
+                    }
                     
                     clearTimeout(data.pathUpdateRefreshTimout);
 
@@ -126,16 +130,16 @@
                                 $fileBrowser_window_box_header_path_input_rI.val(data.path);
                             }
 
+                            result_json.files.sort(function (a, b) {
+                                return a.name.localeCompare(b.name);
+                            });
+                            
                             $fileBrowser_total_number.html(result_json.files.length);
 
                             if (data.path == '/') {
                                 $fileBrowser_items_parentBtn.hide();
                             } else {
                                 $fileBrowser_items_parentBtn.show();
-                            }
-
-                            if (parameters.onFileSelected) {
-                                data.onFileSelected = parameters.onFileSelected;
                             }
 
                             $fileBrowser_items_parentBtn.off('click.FileBrowser');
@@ -179,6 +183,8 @@
                                             onFileSelected: data.onFileSelected
                                         });
                                     } else {
+                                        _file.path = _file.path.replace(/\/+/gi, '/');
+                                        
                                         data.onFileSelected({file: _file});
                                         $fileBrowser.trigger('FileBrowser_file_selected', {file: _file, item: item});
                                     }
@@ -291,7 +297,7 @@
                     }
 
                     var path = $fileBrowser_window_box_header_path_input_rI.val();
-
+                    
                     if (!path.length) {
                         path = '/';
                     }
@@ -341,6 +347,8 @@
                         return;
                     }
 
+                    data.clearSelected();
+
                     prev_path = path;
 
                     if (!path.length) {
@@ -375,6 +383,10 @@
                         parameters = {};
                     }
 
+                    if (parameters.onFileSelected) {
+                        data.onFileSelected = parameters.onFileSelected;
+                    }
+                    
                     data.is_opened = true;
 
                     $fileBrowser.fadeIn(data.animation_duration);

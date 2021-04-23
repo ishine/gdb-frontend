@@ -8,7 +8,8 @@
 # Licensed under GNU/GPLv3
 # Copyright (C) 2019, Oğuzhan Eroğlu (https://oguzhaneroglu.com/) <rohanrhu2@gmail.com>
 
-VERSION = [0, 0, 15, "alpha"]
+VERSION = [0, 5, 3, "beta"]
+VERSION_STRING = "v"+".".join([str(i) for i in VERSION[:-1]])+"-"+VERSION[-1]
 
 """
 GDB-Frontend GUI modes.

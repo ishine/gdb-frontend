@@ -47,37 +47,125 @@
 
             data.$gdbFrontend_layout_bottom = $gdbFrontend.find('.GDBFrontend_layout_bottom');
 
+            data.$gdbFrontend_layout_status = $gdbFrontend.find('.GDBFrontend_layout_status');
+
+            data.$gdbFrontend_layout_status_runningStatus = $gdbFrontend.find('.GDBFrontend_layout_status_runningStatus');
+            data.$gdbFrontend_layout_status_runningStatus__notRunning = $gdbFrontend.find('.GDBFrontend_layout_status_runningStatus_status__notRunning');
+            data.$gdbFrontend_layout_status_runningStatus__running = $gdbFrontend.find('.GDBFrontend_layout_status_runningStatus_status__running');
+            data.$gdbFrontend_layout_status_runningStatus__stopped = $gdbFrontend.find('.GDBFrontend_layout_status_runningStatus_status__stopped');
+            
+            data.$gdbFrontend_layout_status_inferior = $gdbFrontend.find('.GDBFrontend_layout_status_inferior');
+            data.$gdbFrontend_layout_status_inferior_value = $gdbFrontend.find('.GDBFrontend_layout_status_inferior_value');
+            data.$gdbFrontend_layout_status_runTime = $gdbFrontend.find('.GDBFrontend_layout_status_runTime');
+            data.$gdbFrontend_layout_status_runTime_value = $gdbFrontend.find('.GDBFrontend_layout_status_runTime_value');
+            data.$gdbFrontend_layout_status_stepTime = $gdbFrontend.find('.GDBFrontend_layout_status_stepTime');
+            data.$gdbFrontend_layout_status_stepTime_value = $gdbFrontend.find('.GDBFrontend_layout_status_stepTime_value');
+
             data.$gdbFrontend_load = $gdbFrontend.find('.GDBFrontend_load');
             data.$gdbFrontend_load_loadBtn = data.$gdbFrontend_load.find('.GDBFrontend_load_loadBtn');
 
-            data.$GDBFrontend_load_connectBtn = data.$gdbFrontend_load.find('.GDBFrontend_load_connectBtn');
-            data.$GDBFrontend_load_connectBtn_openable = data.$GDBFrontend_load_connectBtn.find('.GDBFrontend_load_connectBtn_openable');
-            data.$GDBFrontend_load_connectBtn_openable_addressInput = data.$GDBFrontend_load_connectBtn_openable.find('.GDBFrontend_load_connectBtn_openable_addressInput');
-            data.$GDBFrontend_load_connectBtn_openable_connectBtn = data.$GDBFrontend_load_connectBtn_openable.find('.GDBFrontend_load_connectBtn_openable_connectBtn');
+            data.$gdbFrontend_load_connectBtn = data.$gdbFrontend_load.find('.GDBFrontend_load_connectBtn');
+            data.$gdbFrontend_load_connectBtn_openable = data.$gdbFrontend_load_connectBtn.find('.GDBFrontend_load_connectBtn_openable');
+            data.$gdbFrontend_load_connectBtn_openable_addressInput = data.$gdbFrontend_load_connectBtn_openable.find('.GDBFrontend_load_connectBtn_openable_addressInput');
+            data.$gdbFrontend_load_connectBtn_openable_connectBtn = data.$gdbFrontend_load_connectBtn_openable.find('.GDBFrontend_load_connectBtn_openable_connectBtn');
 
-            data.$GDBFrontend_terminal = $gdbFrontend.find('.GDBFrontend_terminal');
-            data.$GDBFrontend_terminal_terminal = data.$GDBFrontend_terminal.find('.GDBFrontend_terminal_terminal');
-            data.$GDBFrontend_terminalOpenBtn = $gdbFrontend.find('.GDBFrontend_terminalOpenBtn');
-            data.$GDBFrontend_terminalCloseBtn = $gdbFrontend.find('.GDBFrontend_terminalCloseBtn');
+            data.$gdbFrontend_terminal = $gdbFrontend.find('.GDBFrontend_terminal');
+            data.$gdbFrontend_terminal_terminal = data.$gdbFrontend_terminal.find('.GDBFrontend_terminal_terminal');
+            data.$gdbFrontend_terminalOpenBtn = $gdbFrontend.find('.GDBFrontend_terminalOpenBtn');
+            data.$gdbFrontend_terminalCloseBtn = $gdbFrontend.find('.GDBFrontend_terminalCloseBtn');
 
-            data.$GDBFrontend_runtimeControls = $gdbFrontend.find('.GDBFrontend_runtimeControls');
-            data.$GDBFrontend_runtimeControls_btn__run = data.$GDBFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__run');
-            data.$GDBFrontend_runtimeControls_btn__pause = data.$GDBFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__pause');
-            data.$GDBFrontend_runtimeControls_btn__continue = data.$GDBFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__continue');
-            data.$GDBFrontend_runtimeControls_btn__s = data.$GDBFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__s');
-            data.$GDBFrontend_runtimeControls_btn__n = data.$GDBFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__n');
-            data.$GDBFrontend_runtimeControls_btn__si = data.$GDBFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__si');
-            data.$GDBFrontend_runtimeControls_btn__t = data.$GDBFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__t');
-            data.$GDBFrontend_runtimeControls_btn__evaluate = data.$GDBFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__evaluate');
+            data.$gdbFrontend_runtimeControls = $gdbFrontend.find('.GDBFrontend_runtimeControls');
+            data.$gdbFrontend_runtimeControls_btn__run = data.$gdbFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__run');
+            data.$gdbFrontend_runtimeControls_btn__run_btn = data.$gdbFrontend_runtimeControls_btn__run.find('.GDBFrontend_runtimeControls_btn_btn');
+            data.$gdbFrontend_runtimeControls_btn__run_argsInput = data.$gdbFrontend_runtimeControls_btn__run.find('.GDBFrontend_runtimeControls_btn__run_argsInput');
+            data.$gdbFrontend_runtimeControls_btn__pause = data.$gdbFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__pause');
+            data.$gdbFrontend_runtimeControls_btn__pause_btn = data.$gdbFrontend_runtimeControls_btn__pause.find('.GDBFrontend_runtimeControls_btn_btn');
+            data.$gdbFrontend_runtimeControls_btn__continue = data.$gdbFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__continue');
+            data.$gdbFrontend_runtimeControls_btn__continue_btn = data.$gdbFrontend_runtimeControls_btn__continue.find('.GDBFrontend_runtimeControls_btn_btn');
+            data.$gdbFrontend_runtimeControls_btn__s = data.$gdbFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__s');
+            data.$gdbFrontend_runtimeControls_btn__s_btn = data.$gdbFrontend_runtimeControls_btn__s.find('.GDBFrontend_runtimeControls_btn_btn');
+            data.$gdbFrontend_runtimeControls_btn__n = data.$gdbFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__n');
+            data.$gdbFrontend_runtimeControls_btn__n_btn = data.$gdbFrontend_runtimeControls_btn__n.find('.GDBFrontend_runtimeControls_btn_btn');
+            data.$gdbFrontend_runtimeControls_btn__si = data.$gdbFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__si');
+            data.$gdbFrontend_runtimeControls_btn__si_btn = data.$gdbFrontend_runtimeControls_btn__si.find('.GDBFrontend_runtimeControls_btn_btn');
+            data.$gdbFrontend_runtimeControls_btn__t = data.$gdbFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__t');
+            data.$gdbFrontend_runtimeControls_btn__t_btn = data.$gdbFrontend_runtimeControls_btn__t.find('.GDBFrontend_runtimeControls_btn_btn');
+            data.$gdbFrontend_runtimeControls_btn__evaluate = data.$gdbFrontend_runtimeControls.find('.GDBFrontend_runtimeControls_btn__evaluate');
+            data.$gdbFrontend_runtimeControls_btn__evaluate_btn = data.$gdbFrontend_runtimeControls_btn__evaluate.find('.GDBFrontend_runtimeControls_btn_btn');
+
+            data.$gdbFrontend_variablesExplorer__proto = $gdbFrontend.find('.GDBFrontend_variablesExplorerProto > .VariablesExplorer');
 
             data.$gdbFrontend_evaluaters = $gdbFrontend.find('.GDBFrontend_evaluaters');
             data.$gdbFrontend_pointings = $gdbFrontend.find('.GDBFrontend_pointings');
-
+            
             data.$gdbFrontend_sources = $gdbFrontend.find('.GDBFrontend_sources');
             data.$gdbFrontend_sources_title = data.$gdbFrontend_sources.find('.GDBFrontend_sources_title');
+            data.$gdbFrontend_sources_title_buttons_button__openSource = data.$gdbFrontend_sources_title.find('.GDBFrontend_sources_title_buttons_button');
             data.$gdbFrontend_sourceTreeComp = data.$gdbFrontend_sources.find('.GDBFrontend_sourceTreeComp');
             data.$gdbFrontend_sourceTree = data.$gdbFrontend_sourceTreeComp.find('> .SourceTree');
             data.gdbFrontend_sourceTree = null;
+            
+            data.$gdbFrontend_disassembly_title_buttons_button__openTab = $gdbFrontend.find('.GDBFrontend_disassembly_title_buttons_button__openTab');
+
+            data.is_readonly = (t_init.parameters.is_readonly !== undefined) ? t_init.parameters.is_readonly: false;
+            
+            data.sourceOpener_current_dir = GDBFrontend.config.workdir ? GDBFrontend.config.workdir: '/';
+
+            data.loadFile = function () {
+                
+            };
+            
+            data.openSourceOpener = function () {
+                GDBFrontend.components.fileBrowser.open({
+                    path: data.sourceOpener_current_dir,
+                    onFileSelected: function (parameters) {
+                        data.sourceOpener_current_dir = GDBFrontend.components.fileBrowser.path;
+                        
+                        GDBFrontend.components.gdbFrontend.openSource({
+                            file: {path: parameters.file.path}
+                        });
+                        GDBFrontend.components.fileBrowser.close();
+                    }
+                });
+            };
+
+            data.$gdbFrontend_sources_title_buttons_button__openSource.on('click.GDBFrontend', function (event) {
+                data.openSourceOpener();
+            });
+            
+            data.$gdbFrontend_disassembly_title_buttons_button__openTab.on('click.GDBFrontend', function (event) {
+                var disasTab = data.components.fileTabs.openDisassembly({switch: true});
+                if (disasTab.exists) {
+                    data.components.fileTabs.switchFile({file: disasTab.file});
+                }
+
+                if (!data.debug.state) return;
+                if (!data.debug.state.selected_frame) return;
+
+                disasTab.file.disassembly.load({
+                    pc: data.debug.state.selected_frame.pc,
+                    instructions: data.debug.state.selected_frame.disassembly
+                });
+                disasTab.file.disassembly.render();
+
+                data.debug.clearDisassemblyBreakpoints();
+                data.debug.placeDisassemblyBreakpoints();
+            });
+
+            $('body').on('keydown.GDBFrontend', function (event) {
+                if (GDBFrontend.components.fileBrowser.is_opened) {
+                    return;
+                }
+
+                var keycode = event.keyCode ? event.keyCode: event.which;
+
+                if (event.ctrlKey && keycode == 79) {
+                    event.stopImmediatePropagation();
+                    event.preventDefault();
+                    
+                    data.openSourceOpener();
+                }
+            });
 
             data.$gdbFrontend_disassemblyComp = $gdbFrontend.find('.GDBFrontend_disassemblyComp');
             data.$gdbFrontend_disassembly = data.$gdbFrontend_disassemblyComp.find('> .Disassembly');
@@ -126,9 +214,15 @@
             data.is_terminal_opened = false;
             data.layout_middle_right_scroll_top = 0;
 
+            data.last_not_found_source = false;
+            
             data.evaluaters = [];
 
             data.createEvaluater = function (parameters) {
+                if (parameters === undefined) {
+                    parameters = {};
+                }
+
                 var evaluater = {};
 
                 evaluater.$evaluateExpression = data.$gdbFrontend_evaluateExpression.clone();
@@ -154,19 +248,39 @@
                         return true;
                     });
                 });
+
+                if (parameters.expression) {
+                    evaluater.evaluateExpression.evaluate({expression: parameters.expression});
+                }
             };
             
             data.debug.getBreakpoint = function (parameters) {
                 var bp = false;
                 var bp_i = false;
 
-                data.debug.breakpoints.forEach(function (_bp, _bp_i) {
-                    if (_bp.file && (parameters.file.path == _bp.file) && (parameters.line == _bp.line)) {
-                        bp = _bp;
-                        bp_i = _bp_i;
-                        return false;
-                    }
-                });
+                if (!parameters.instruction) {
+                    data.debug.breakpoints.every(function (_bp, _bp_i) {
+                        if (_bp.file && (parameters.file.path == _bp.file) && (parameters.line == _bp.line)) {
+                            bp = _bp;
+                            bp_i = _bp_i;
+                            
+                            return false;
+                        }
+
+                        return true;
+                    });
+                } else {
+                    data.debug.breakpoints.every(function (_bp, _bp_i) {
+                        if ((_bp.gdb_breakpoint.location[0] == '*') && (_bp.gdb_breakpoint.location.substr(1) == parameters.instruction.addr)) {
+                            bp = _bp;
+                            bp_i = _bp_i;
+
+                            return false;
+                        }
+
+                        return true;
+                    });
+                }
 
                 return bp ? {
                     breakpoint: bp,
@@ -175,17 +289,23 @@
             };
 
             data.debug.addBreakpoint = function (parameters) {
-                var bp = data.debug.getBreakpoint({file: parameters.file, line: parameters.line});
+                var bp = data.debug.getBreakpoint({file: parameters.file, line: parameters.line, instruction: parameters.instruction});
 
                 if (!bp) {
+                    var api_params = {};
+
+                    if (!parameters.instruction) {
+                        api_params.file = parameters.file.path;
+                        api_params.line = parameters.line;
+                    } else {
+                        api_params.address = parameters.instruction.addr;
+                    }
+                    
                     $.ajax({
                         url: '/api/breakpoint/add',
                         cache: false,
                         method: 'get',
-                        data: {
-                            file: parameters.file.path,
-                            line: parameters.line
-                        },
+                        data: api_params,
                         success: function (result_json) {
                         },
                         error: function () {
@@ -218,14 +338,15 @@
             };
 
             data.debug.toggleBreakpoint = function (parameters) {
-                var bp = data.debug.getBreakpoint({file: parameters.file, line: parameters.line});
+                var bp = data.debug.getBreakpoint({file: parameters.file, line: parameters.line, instruction: parameters.instruction});
 
                 if (bp) {
                     data.debug.delBreakpoint({number: bp.breakpoint.gdb_breakpoint.number});
                 } else {
                     data.debug.addBreakpoint({
                         file: parameters.file,
-                        line: parameters.line
+                        line: parameters.line,
+                        instruction: parameters.instruction
                     });
                 }
             };
@@ -233,7 +354,14 @@
             data.$gdbFrontend_fileTabs.on('FileTabs_breakpoints_toggle.GDBFrontend', function (event, parameters) {
                 data.debug.toggleBreakpoint({
                     file: parameters.file,
-                    line: parameters.line
+                    line: parameters.line,
+                    instruction: parameters.instruction
+                });
+            });
+            
+            data.$gdbFrontend_disassembly.on('Disassembly_breakpoints_toggle.GDBFrontend', function (event, parameters) {
+                data.debug.toggleBreakpoint({
+                    instruction: parameters.instruction
                 });
             });
 
@@ -250,6 +378,15 @@
 
                 var getFile = function (_file_i) {
                     var _file = parameters.files[_file_i];
+
+                    if (_file === undefined) {
+                        return;
+                    }
+                    
+                    if (_file.path === undefined) {
+                        getFile(_file_i+1);
+                        return;
+                    }
 
                     $.ajax({
                         url: '/api/fs/read',
@@ -303,8 +440,6 @@
                                 !file.is_switched && data.gdbFrontend_fileTabs.switchFile({file: file.file, is_initial: true});
                             }
 
-                            editor_file = file.file;
-
                             if (_file_i < parameters.files.length-1) {
                                 getFile(_file_i+1);
                             } else {
@@ -345,7 +480,7 @@
                 preloadFiles(parameters);
             });
 
-            var last_fileBrowser_path = '/';
+            var last_fileBrowser_path = GDBFrontend.config.workdir ? GDBFrontend.config.workdir: '/';
 
             GDBFrontend.components.fileBrowser.$fileBrowser.on('FileBrowser_entered_directory.GDBFrontend', function (event, parameters) {
                 last_fileBrowser_path = parameters.path;
@@ -375,11 +510,15 @@
                 });
             });
 
-            data.$GDBFrontend_load_connectBtn_openable_connectBtn.on('click.GDBFrontend', function (event) {
-                var address = data.$GDBFrontend_load_connectBtn_openable_addressInput.val();
+            data.$gdbFrontend_load_connectBtn_openable_connectBtn.on('click.GDBFrontend', function (event) {
+                var address = data.$gdbFrontend_load_connectBtn_openable_addressInput.val().trim();
 
-                if ((address.length < 10) || (address.indexOf(':') < 0)) {
-                    GDBFrontend.showMessageBox({text: "Provide a gdbserver address like \"127.0.0.1:2345\" (host:port)."});
+                if (
+                    ((address[0] == '/') && (address.length < 2))
+                    ||
+                    ((address[0] != '/') && ((address.length < 10) || (address.indexOf(':') < 0)))
+                ) {
+                    GDBFrontend.showMessageBox({text: "Provide a gdbserver address like \"127.0.0.1:2345\" (host:port) or a serial path like /dev/tty5."});
                     return;
                 }
 
@@ -415,7 +554,7 @@
                 if (GDBFrontend.gui_mode == GDBFrontend.GUI_MODE_WEB_TMUX) {
                     var $iframe = $('<iframe></iframe>');
                     $iframe.addClass('GDBFrontend_terminal_iframe');
-                    $iframe.appendTo(data.$GDBFrontend_terminal_terminal);
+                    $iframe.appendTo(data.$gdbFrontend_terminal_terminal);
                     $iframe.attr('src', 'http://'+GDBFrontend.config.host_address+':'+GDBFrontend.config.gotty_port);
                     data.$gdbFrontend_layout_bottom.show();
                     data.is_terminal_opened = true;
@@ -432,7 +571,7 @@
                     localStorage.setItem($.fn.GDBFrontend.kvKey('layout_middle_left:width'), data.$gdbFrontend_layout_middle_left.innerWidth());
                     
                     data.components.fileTabs.files.every(function (_file, _file_i) {
-                        _file.ace.resize();
+                        _file.ace && _file.ace.resize();
                         return true;
                     });
                 });
@@ -441,7 +580,7 @@
                     localStorage.setItem($.fn.GDBFrontend.kvKey('layout_middle_right:width'), data.$gdbFrontend_layout_middle_right.innerWidth());
                     
                     data.components.fileTabs.files.every(function (_file, _file_i) {
-                        _file.ace.resize();
+                        _file.ace && _file.ace.resize();
                         return true;
                     });
                 });
@@ -450,7 +589,7 @@
                     localStorage.setItem($.fn.GDBFrontend.kvKey('layout_middle_bottom:height'), data.$gdbFrontend_layout_bottom.innerHeight());
                     
                     data.components.fileTabs.files.every(function (_file, _file_i) {
-                        _file.ace.resize();
+                        _file.ace && _file.ace.resize();
                         return true;
                     });
                 });
@@ -502,7 +641,7 @@
                 data.gdbFrontend_evaluateExpression = data.$gdbFrontend_evaluateExpression.data('EvaluateExpression');
                 data.components.evaluateExpression = data.gdbFrontend_evaluateExpression;
 
-                data.debug.socket = new WebSocket('ws://'+GDBFrontend.config.host_address+':'+GDBFrontend.config.server_port);
+                data.debug.socket = new WebSocket('ws://'+GDBFrontend.config.host_address+':'+GDBFrontend.config.http_port+"/debug-server");
 
                 data.debug.socket.onopen = function (event) {
                     GDBFrontend.verbose('Connected to debugging server.');
@@ -523,7 +662,7 @@
                 data.debug.socket.onerror = function (event) {
                     GDBFrontend.verbose('Debugging server message error.');
                 };
-
+                
                 data.initSem.leave();
 
                 data.comply();
@@ -581,7 +720,7 @@
             };
 
             data.debug.setWatches = function () {
-                new Promise(function (resolve) {
+                new Promise(function (resolve, reject) {
                     data.gdbFrontend_watches.watches.every(function (_watch, _watch_i) {
                         if (_watch.is_adder) {
                             return true;
@@ -621,6 +760,82 @@
                     });
                 });
             };
+            
+            data.debug.reloadFileTabs = function () {
+                new Promise(function (resolve, reject) {
+                    data.components.fileTabs.files.every(function (_file, _file_i) {
+                        if (!_file.path) {
+                            resolve();
+                            return false;
+                        }
+                        
+                        $.ajax({
+                            url: '/api/fs/read',
+                            cache: false,
+                            method: 'get',
+                            data: {
+                                path: _file.path
+                            },
+                            success: function (result_json) {
+                                if (result_json.error) {
+                                    if (result_json.error.not_exists) {
+                                        GDBFrontend.showMessageBox({text: 'Path not found.'});
+                                        console.trace("Path not found.");
+                                    } else if (result_json.error.not_permitted) {
+                                        GDBFrontend.showMessageBox({text: 'Access denied.'});
+                                    } else {
+                                        GDBFrontend.showMessageBox({text: 'An error occured.'});
+                                        console.trace('An error occured.');
+                                    }
+        
+                                    resolve();
+                                    return;
+                                } else if (!result_json.ok) {
+                                    GDBFrontend.showMessageBox({text: 'An error occured.'});
+                                    console.trace('An error occured.');
+                                    resolve();
+                                    return;
+                                }
+                                
+                                _file.setContent({content: result_json.file.content});
+        
+                                data.debug.placeEditorFileBreakpoints({editor_file: _file});
+    
+                                if (data.debug.state && data.debug.state.selected_frame && (_file.path == data.debug.state.selected_frame.file.path)) {
+                                    _file.clearStop();
+                                    _file.setStop({line: data.debug.state.current_location.line});
+    
+                                    setTimeout(function () {
+                                        _file.ace.scrollToLine(data.debug.state.current_location.line, true, true, function () {});
+                                        _file.ace.gotoLine(data.debug.state.current_location.line, 0, true);
+                                    }, 0);
+                                }
+
+                                resolve();
+                            },
+                            error: function () {
+                                GDBFrontend.showMessageBox({text: 'Path not found.'});
+                                console.trace("Path not found.");
+                                resolve();
+                            }
+                        });
+                        
+                        return true;
+                    });
+                });
+            };
+
+            $gdbFrontend.on('GDBFrontend_debug_refresh.GDBFrontend', function (event, message) {
+                window.location.reload();
+            });
+            
+            $gdbFrontend.on('GDBFrontend_debug_plugin_loaded.GDBFrontend', function (event, message) {
+                GDBFrontend.verbose('Plugin loaded: ', message.plugin.name);
+            });
+            
+            $gdbFrontend.on('GDBFrontend_debug_plugin_unloaded.GDBFrontend', function (event, message) {
+                GDBFrontend.verbose('Plugin unloaded: ', message.plugin.name);
+            });
 
             $gdbFrontend.on('GDBFrontend_debug_exited.GDBFrontend', function (event, message) {
                 data.debug.setExited(message);
@@ -650,7 +865,8 @@
                 data.debug.getState();
             });
 
-            $gdbFrontend.on('GDBFrontend_debug_new_objfile.GDBFrontend', function (event, message) {
+            $gdbFrontend.on('GDBFrontend_debug_new_objfile.GDBFrontend', async function (event, message) {
+                await data.debug.reloadFileTabs();
                 data.debug.setState({state: message.state, reload_files: true});
             });
 
@@ -808,8 +1024,73 @@
 
                 data.debug.state = parameters.state;
 
+                var running_threads_count = 0;
+                var current_thread_num = 0;
+                
+                data.debug.state.inferior.threads.forEach(function (_thread, _thread_i) {
+                    if (_thread.is_running) {
+                        running_threads_count++;
+                    }
+
+                    if (_thread.is_current) {
+                        current_thread_num = _thread.num;
+                    }
+                });
+
+                data.$gdbFrontend_layout_status_inferior_value.html(data.debug.state.inferior.num);
+                data.$gdbFrontend_layout_status_inferior.css('display', 'flex');
+                
+                if (running_threads_count) {
+                    data.$gdbFrontend_layout_status_runningStatus__notRunning.hide();
+                    data.$gdbFrontend_layout_status_runningStatus__running.css('display', 'flex');
+                    data.$gdbFrontend_layout_status_runningStatus__running
+                    .find('.GDBFrontend_layout_status_runningStatus_status_label')
+                    .html('Running ('+running_threads_count+' / '+data.debug.state.inferior.threads.length+' threads)');
+                    data.$gdbFrontend_layout_status_runningStatus__stopped.hide();
+
+                    data.$gdbFrontend_layout_status_runTime.css('display', 'flex');
+                } else if (data.debug.state.inferior.threads.length) {
+                    data.$gdbFrontend_layout_status_runningStatus__notRunning.hide();
+                    data.$gdbFrontend_layout_status_runningStatus__running.hide();
+                    data.$gdbFrontend_layout_status_runningStatus__stopped.css('display', 'flex');
+                    data.$gdbFrontend_layout_status_runningStatus__stopped
+                    .find('.GDBFrontend_layout_status_runningStatus_status_label')
+                    .html('Stopped ('+data.debug.state.inferior.threads.length+' threads total)');
+                    
+                    data.$gdbFrontend_layout_status_runTime.css('display', 'flex');
+                } else {
+                    data.$gdbFrontend_layout_status_runningStatus__notRunning.css('display', 'flex');
+                    data.$gdbFrontend_layout_status_runningStatus__running.hide();
+                    data.$gdbFrontend_layout_status_runningStatus__stopped.hide();
+
+                    data.$gdbFrontend_layout_status_runTime.hide();
+                }
+
+                if (data.debug.state.inferior.run_time) {
+                    var runned_at = new Date(data.debug.state.inferior.run_time*1000);
+                        
+                    data.$gdbFrontend_layout_status_runTime_value.html(
+                        runned_at.getHours() + ":" + runned_at.getMinutes()
+                    );
+                }
+                
+                if (data.debug.state.step_time !== false) {
+                    data.$gdbFrontend_layout_status_stepTime.css('display', 'flex');
+                    data.$gdbFrontend_layout_status_stepTime_value.html(
+                        parseInt(Math.round(data.debug.state.step_time * 1000) / 1000)
+                        + ' ms'
+                    );
+                } else {
+                    data.$gdbFrontend_layout_status_stepTime.hide();
+                }
+                
                 if (parameters.state.selected_frame) {
                     data.gdbFrontend_disassembly.load({
+                        pc: parameters.state.selected_frame.pc,
+                        instructions: parameters.state.selected_frame.disassembly
+                    });
+                    
+                    data.gdbFrontend_fileTabs.loadInstructions({
                         pc: parameters.state.selected_frame.pc,
                         instructions: parameters.state.selected_frame.disassembly
                     });
@@ -823,24 +1104,28 @@
                 data.gdbFrontend_sourceTree.render();
 
                 data.debug.clearEditorBreakpoints();
+                data.debug.clearDisassemblyBreakpoints();
 
                 data.debug.breakpoints = [];
                 parameters.state.breakpoints.forEach(function (_gdb_bp, _gdb_bp_i) {
                     var loc = _gdb_bp.location.match(/-source (.+?) -line (\d+)/i);
 
-                    if (loc) {
-                        var bp = {
-                            gdb_breakpoint: _gdb_bp
-                        };
+                    var bp = {
+                        gdb_breakpoint: _gdb_bp
+                    };
 
+                    if (loc) {
                         bp.file = loc[1];
                         bp.line = loc[2];
-
-                        data.debug.breakpoints.push(bp);
+                    } else if (bp.gdb_breakpoint.location[0] == '*') {
+                        bp.address = bp.gdb_breakpoint.location.substr(1);
                     }
+
+                    data.debug.breakpoints.push(bp);
                 });
 
                 data.debug.placeEditorBreakpoints();
+                data.debug.placeDisassemblyBreakpoints();
 
                 data.gdbFrontend_breakpointsEditor.load({breakpoints: data.debug.breakpoints});
                 data.gdbFrontend_breakpointsEditor.render();
@@ -880,9 +1165,22 @@
                             editor_file.ace.gotoLine(parameters.state.current_location.line, 0, true);
                         }, 0);
                     };
+                    
+                    if (!parameters.state.current_location) {
+                        var disasTab = data.components.fileTabs.openDisassembly({switch: true});
+                        if (disasTab.exists) {
+                            data.components.fileTabs.switchFile({file: disasTab.file});
+                        }
 
-                    if (!editor_file) {
-                        parameters.state.current_location &&
+                        disasTab.file.disassembly.load({
+                            pc: parameters.state.selected_frame.pc,
+                            instructions: parameters.state.selected_frame.disassembly
+                        });
+                        disasTab.file.disassembly.render();
+
+                        data.debug.clearDisassemblyBreakpoints();
+                        data.debug.placeDisassemblyBreakpoints();
+                    } else if (!editor_file) {
                         $.ajax({
                             url: '/api/fs/read',
                             cache: false,
@@ -893,9 +1191,27 @@
                             success: function (result_json) {
                                 if (result_json.error) {
                                     if (result_json.error.not_exists) {
-                                        var msg = 'Source file not found. ('+parameters.state.current_location.file+')'
-                                        GDBFrontend.showMessageBox({text: msg});
-                                        console.trace('[GDBFrontend]', msg);
+                                        if (!data.last_not_found_source || (data.last_not_found_source != parameters.state.current_location.file)) {
+                                            var msg = 'Source file not found. ('+parameters.state.current_location.file+')'
+                                            GDBFrontend.showMessageBox({text: msg});
+                                            console.trace('[GDBFrontend]', msg);
+
+                                            data.last_not_found_source = parameters.state.current_location.file;
+                                        }
+
+                                        var disasTab = data.components.fileTabs.openDisassembly({switch: true});
+                                        if (disasTab.exists) {
+                                            data.components.fileTabs.switchFile({file: disasTab.file});
+                                        }
+
+                                        disasTab.file.disassembly.load({
+                                            pc: parameters.state.selected_frame.pc,
+                                            instructions: parameters.state.selected_frame.disassembly
+                                        });
+                                        disasTab.file.disassembly.render();
+
+                                        data.debug.clearDisassemblyBreakpoints();
+                                        data.debug.placeDisassemblyBreakpoints();
                                     } else if (result_json.error.not_permitted) {
                                         GDBFrontend.showMessageBox({text: 'Access denied.'});
                                     } else {
@@ -951,6 +1267,94 @@
                 }
                 
                 data.$gdbFrontend_layout_middle_right_content.scrollTop(data.layout_middle_right_scroll_top);
+            };
+
+            data.debug.clearDisassemblyBreakpoint = function (parameters) {
+                if ((parameters.editor_file == undefined) && (parameters.id === undefined)) {
+                    data.components.disassembly.instructions.every(function (_instruction, _instruction_i) {
+                        if (_instruction.addr == parameters.address) {
+                            _instruction.Disassembly[data.components.disassembly.id].delBreakpoint();
+                            return false;
+                        }
+                        return true;
+                    });
+
+                    return;
+                }
+                
+                var editor_file = parameters.editor_file ?
+                                  parameters.editor_file:
+                                  data.gdbFrontend_fileTabs.getFileById(parameters.id);
+
+                if (!editor_file) return false;
+
+                return editor_file.delBreakpoint({
+                    address: parameters.address
+                });
+            };
+
+            data.debug.clearDisassemblyBreakpoints = function (parameters) {
+                data.debug.breakpoints.forEach(function (_bp, _bp_i) {
+                    if (!_bp.address) return true;
+
+                    data.debug.clearDisassemblyBreakpoint({address: _bp.address});
+                    
+                    data.components.fileTabs.files.every(function (_tab, _tab_i) {
+                        if (!_tab.disassembly) {
+                            return true;
+                        }
+
+                        data.debug.clearDisassemblyBreakpoint({editor_file: _tab, address: _bp.address});
+                        
+                        return true;
+                    });
+                });
+            };
+
+            data.debug.placeDisassemblyBreakpoint = function (parameters) {
+                if ((parameters.editor_file == undefined) && (parameters.id === undefined)) {
+                    data.components.disassembly.instructions.every(function (_instruction, _instruction_i) {
+                        if (_instruction.addr == parameters.address) {
+                            _instruction.Disassembly[data.components.disassembly.id].addBreakpoint();
+                            return false;
+                        }
+                        return true;
+                    });
+
+                    return;
+                }
+                
+                var editor_file = parameters.editor_file ?
+                                  parameters.editor_file:
+                                  data.gdbFrontend_fileTabs.getFileByPath(parameters.id);
+
+                if (!editor_file) return false;
+
+                return editor_file.addBreakpoint({
+                    address: parameters.address
+                });
+            };
+
+            data.debug.placeDisassemblyBreakpoints = function (parameters) {
+                data.debug.breakpoints.every(function (_bp, _bp_i) {
+                    if (_bp.file) return true;
+
+                    data.debug.placeDisassemblyBreakpoint({address: _bp.address});
+
+                    data.components.fileTabs.files.every(function (_tab, _tab_i) {
+                        if (!_tab.disassembly) {
+                            return true;
+                        }
+
+                        if (_bp.gdb_breakpoint.enabled) {
+                            data.debug.placeDisassemblyBreakpoint({editor_file: _tab, address: _bp.address});
+                        }
+                        
+                        return true;
+                    });
+
+                    return true;
+                });
             };
 
             data.debug.clearEditorFileBreakpoint = function (parameters) {
@@ -1179,6 +1583,10 @@
                     },
                     success: function (result_json) {
                         data.debug.getState({return: function () {
+                            if (!parameters.frame.file) {
+                                return;
+                            }
+                            
                             var editor_file = data.gdbFrontend_fileTabs.getFileByPath(parameters.frame.file.path);
 
                             var _continue = function () {
@@ -1193,7 +1601,7 @@
                                 }), 100;
                             };
 
-                            if (!editor_file) {
+                            if (!editor_file && parameters.frame.file) {
                                 $.ajax({
                                     url: '/api/fs/read',
                                     cache: false,
@@ -1204,9 +1612,13 @@
                                     success: function (result_json) {
                                         if (result_json.error) {
                                             if (result_json.error.not_exists) {
-                                                var msg = 'Source file not found. ('+parameters.frame.file.path+')'
+                                                if (!data.last_not_found_source || (data.last_not_found_source != parameters.frame.file.path)) {
+                                                    var msg = 'Source file not found. ('+parameters.frame.file.path+')'
                                                 GDBFrontend.showMessageBox({text: msg});
                                                 console.trace('[GDBFrontend]', msg);
+        
+                                                    data.last_not_found_source = parameters.frame.file.path;
+                                                }
                                             } else if (result_json.error.not_permitted) {
                                                 GDBFrontend.showMessageBox({text: 'Access denied.'});
                                             } else {
@@ -1267,15 +1679,26 @@
                 var tree = [];
 
                 parameters.item.tree.forEach(function (_member, _member_i) {
-                    tree.push(_member.variable.name);
+                    tree.push(_member.variable.expression ? _member.variable.expression: _member.variable.name);
                 });
 
                 var qs = {
-                    variable: parameters.item.variable.name
+                    variable: parameters.item.variable.expression
                 };
 
-                if (tree.length > 1) {
+                if (!qs.variable && (tree.length > 1)) {
                     qs['expression'] = tree.join('.');
+                }
+
+                if (
+                    parameters.item.parent
+                    &&
+                    (
+                        (parameters.item.variable.type.code == $.fn.VariablesExplorer.TYPE_CODE_STRUCT)
+                        ||
+                        (parameters.item.variable.type.code == $.fn.VariablesExplorer.TYPE_CODE_UNION))
+                ) {
+                    qs.expression = '('+parameters.item.variable.type.name+')'+qs.expression;
                 }
 
                 $.ajax({
@@ -1312,12 +1735,13 @@
                 });
             });
 
-            data.$GDBFrontend_runtimeControls_btn__run.on('click.GDBFrontend', function (event) {
+            data.$gdbFrontend_runtimeControls_btn__run_btn.on('click.GDBFrontend', function (event) {
                 $.ajax({
                     url: '/api/runtime/run',
                     cache: false,
                     method: 'get',
                     data: {
+                        args: data.$gdbFrontend_runtimeControls_btn__run_argsInput.val()
                     },
                     success: function (result_json) {
                     },
@@ -1328,7 +1752,7 @@
                 });
             });
 
-            data.$GDBFrontend_runtimeControls_btn__pause.on('click.GDBFrontend', function (event) {
+            data.$gdbFrontend_runtimeControls_btn__pause_btn.on('click.GDBFrontend', function (event) {
                 $.ajax({
                     url: '/api/runtime/pause',
                     cache: false,
@@ -1344,7 +1768,7 @@
                 });
             });
 
-            data.$GDBFrontend_runtimeControls_btn__continue.on('click.GDBFrontend', function (event) {
+            data.$gdbFrontend_runtimeControls_btn__continue_btn.on('click.GDBFrontend', function (event) {
                 $.ajax({
                     url: '/api/runtime/continue',
                     cache: false,
@@ -1360,7 +1784,7 @@
                 });
             });
 
-            data.$GDBFrontend_runtimeControls_btn__n.on('click.GDBFrontend', function (event) {
+            data.$gdbFrontend_runtimeControls_btn__n_btn.on('click.GDBFrontend', function (event) {
                 $.ajax({
                     url: '/api/runtime/next',
                     cache: false,
@@ -1376,7 +1800,7 @@
                 });
             });
 
-            data.$GDBFrontend_runtimeControls_btn__s.on('click.GDBFrontend', function (event) {
+            data.$gdbFrontend_runtimeControls_btn__s_btn.on('click.GDBFrontend', function (event) {
                 $.ajax({
                     url: '/api/runtime/step',
                     cache: false,
@@ -1392,7 +1816,7 @@
                 });
             });
 
-            data.$GDBFrontend_runtimeControls_btn__si.on('click.GDBFrontend', function (event) {
+            data.$gdbFrontend_runtimeControls_btn__si_btn.on('click.GDBFrontend', function (event) {
                 $.ajax({
                     url: '/api/runtime/stepi',
                     cache: false,
@@ -1408,7 +1832,7 @@
                 });
             });
 
-            data.$GDBFrontend_runtimeControls_btn__t.on('click.GDBFrontend', function (event) {
+            data.$gdbFrontend_runtimeControls_btn__t_btn.on('click.GDBFrontend', function (event) {
                 $.ajax({
                     url: '/api/runtime/terminate',
                     cache: false,
@@ -1424,33 +1848,33 @@
                 });
             });
 
-            data.$GDBFrontend_runtimeControls_btn__evaluate.on('click.GDBFrontend', function (event) {
+            data.$gdbFrontend_runtimeControls_btn__evaluate_btn.on('click.GDBFrontend', function (event) {
                 data.createEvaluater();
             });
 
             data.$gdbFrontend_layout_bottom.on('mouseover.GDBFrontend', function (event) {
-                data.$GDBFrontend_terminalCloseBtn.show();
+                data.$gdbFrontend_terminalCloseBtn.show();
             });
             
-            data.$GDBFrontend_terminal.on('mouseout.GDBFrontend', function (event) {
-                data.$GDBFrontend_terminalCloseBtn.hide();
+            data.$gdbFrontend_terminal.on('mouseout.GDBFrontend', function (event) {
+                data.$gdbFrontend_terminalCloseBtn.hide();
             });
             
-            data.$GDBFrontend_terminalOpenBtn.on('click.GDBFrontend', function (event) {
+            data.$gdbFrontend_terminalOpenBtn.on('click.GDBFrontend', function (event) {
                 data.openTerminal();
             });
             
-            data.$GDBFrontend_terminalCloseBtn.on('click.GDBFrontend', function (event) {
+            data.$gdbFrontend_terminalCloseBtn.on('click.GDBFrontend', function (event) {
                 data.closeTerminal();
             });
 
             data.openTerminal = function (parameters) {
                 data.is_terminal_opened = true;
                 data.$gdbFrontend_layout_bottom.show();
-                data.$GDBFrontend_terminalOpenBtn.hide();
+                data.$gdbFrontend_terminalOpenBtn.hide();
 
                 data.components.fileTabs.files.every(function (_file, _file_i) {
-                    _file.ace.resize();
+                    _file.ace && _file.ace.resize();
                     return true;
                 });
             };
@@ -1458,10 +1882,10 @@
             data.closeTerminal = function (parameters) {
                 data.is_terminal_opened = false;
                 data.$gdbFrontend_layout_bottom.hide();
-                data.$GDBFrontend_terminalOpenBtn.show();
+                data.$gdbFrontend_terminalOpenBtn.show();
 
                 data.components.fileTabs.files.every(function (_file, _file_i) {
-                    _file.ace.resize();
+                    _file.ace && _file.ace.resize();
                     return true;
                 });
             };

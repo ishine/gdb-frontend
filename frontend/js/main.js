@@ -172,11 +172,12 @@ $(document).ready(function () {
     });
     
     var $gdbFrontend = $('.GDBFrontend');
-    $gdbFrontend.GDBFrontend();
+    $gdbFrontend.GDBFrontend({is_readonly: GDBFrontend.config.is_readonly});
     GDBFrontend.components.gdbFrontend = $gdbFrontend.data().GDBFrontend;
 
     GDBFrontend.load_plugins.every(function (_plugin, _plugin_i) {
         GDBFrontend.registerPlugin({plugin: _plugin});
+        return true;
     });
 });
 

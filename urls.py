@@ -8,15 +8,12 @@
 # Licensed under GNU/GPLv3
 # Copyright (C) 2019, Oğuzhan Eroğlu (https://oguzhaneroglu.com/) <rohanrhu2@gmail.com>
 
-urls = {
+import api.url
+
+urls = api.url.URLS({
     "main": {
         "url": "/",
         "match": "^/$",
-        "module": "url_modules.main.main"
-    },
-    "main-layout": {
-        "url": "/{layout}/",
-        "match": "^/(.+?)/$",
         "module": "url_modules.main.main"
     },
     "api-state": {
@@ -43,6 +40,11 @@ urls = {
         "url": "/api/fs/read",
         "match": "^/api/fs/read$",
         "module": "url_modules.api.fs.read"
+    },
+    "api-fs-write": {
+        "url": "/api/fs/write",
+        "match": "^/api/fs/write$",
+        "module": "url_modules.api.fs.write"
     },
     "api-sources": {
         "url": "/api/sources$",
@@ -143,5 +145,11 @@ urls = {
         "url": "/api/disassemble-frame",
         "match": "^/api/disassemble-frame$",
         "module": "url_modules.api.disassemble_frame"
+    },
+    "main-layout": {
+        "url": "/{layout}/",
+        "match": "^/(.+?)/?$",
+        "module": "url_modules.main.main",
+        "force_slash": True
     }
-}
+})
